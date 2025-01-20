@@ -8,7 +8,8 @@ body {
 }
 
 .container {
-    width: 700px;
+    max-width: 700px;
+    width: 96%;
     margin: 10px auto;
      /* 
     10px marginaalia ylhäällä ja alhaalla
@@ -54,4 +55,21 @@ footer {
 article img {
     width: 100%;
     height: auto;
+}
+/* Kun näyttö on pienempi kuin 600 pikseliä leveä*/
+/* Ei standardi breakpointsia. Chatgpt suosittelee:
+Mobile 0-599px
+Tablet 600-899px
+Small laptops 900-1199px
+Desktops 1200px+
+
+*/
+@media screen and (max-width: 600px) {
+    body {
+        background-position: center;
+    }
+    article img {
+        display:none;
+        background-position: center;
+    }
 }
